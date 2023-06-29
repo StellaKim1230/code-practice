@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "code-practice",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,7 +13,12 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@co-design/core": "^0.8.3",
+    "@co-design/hooks": "^0.7.1",
+    "@co-design/icons": "^0.6.16",
+    "@co-design/next": "^0.8.1",
+    "@co-design/styled": "^0.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
