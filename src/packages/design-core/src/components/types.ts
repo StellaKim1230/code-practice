@@ -1,5 +1,5 @@
-type AsProp<T extends React.ElementType> = {
-  as?: T
+type ComponentProps<T extends React.ElementType> = {
+  component?: T
 }
 
 export type PolymorphicRef<T extends React.ElementType> =
@@ -7,8 +7,8 @@ export type PolymorphicRef<T extends React.ElementType> =
 
 export type PolymorphicComponentProps<
   T extends React.ElementType,
-  Props = {},
-> = AsProp<T> &
+  Props = unknown,
+> = ComponentProps<T> &
   React.ComponentPropsWithoutRef<T> &
   Props & {
     ref?: PolymorphicRef<T>

@@ -1,19 +1,25 @@
-import { forwardRef } from 'react';
-import { PolymorphicComponentProps, PolymorphicRef } from '../types';
+import { forwardRef } from 'react'
+import { PolymorphicComponentProps, PolymorphicRef } from '../types'
 
-export type ViewProps<C extends React.ElementType> =
-  PolymorphicComponentProps<C>;
+type _ViewProps = {
+  color: string
+}
+
+type ViewProps<T extends React.ElementType> = PolymorphicComponentProps<
+  T,
+  _ViewProps
+>
 
 type ViewComponent = <C extends React.ElementType = 'div'>(
   props: ViewProps<C>,
-) => React.ReactNode | null;
+) => React.ReactNode | null
 
 export const View: ViewComponent = forwardRef(
-  <C extends React.ElementType = 'div'>(
-    { component, ...props }: ViewProps<C>,
-    ref: PolymorphicRef<C>,
+  <T extends React.ElementType = 'div'>(
+    { component, color, ...props }: ViewProps<T>,
+    ref: PolymorphicRef<T>['ref'],
   ) => {
-    const Element = component || 'div';
-    return <Element ref={ref} {...props} />;
+    const Element = component || 'div'
+    return <Element ref={ref} {...props} style={{ color }} />
   },
-);
+)
