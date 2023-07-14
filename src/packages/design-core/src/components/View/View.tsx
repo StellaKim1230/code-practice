@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import React, { forwardRef } from 'react'
 import { PolymorphicComponentProps, PolymorphicRef } from '../types'
 
 type _ViewProps = {
@@ -23,3 +23,13 @@ export const View: ViewComponent = forwardRef(
     return <Element ref={ref} {...props} style={{ color }} />
   },
 )
+
+type TestProps<T extends React.ElementType> = {
+  as?: T
+}
+
+const a = <T extends React.ElementType>(a: T) => {
+  return a
+}
+
+a('a')
