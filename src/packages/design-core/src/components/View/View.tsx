@@ -10,6 +10,7 @@ type ViewProps<T extends React.ElementType> = PolymorphicComponentProps<
   _ViewProps
 >
 
+// PolymorphicComponentProps에서 ref?: PolymorphicRef<T>를 제외하면 ViewComponent여기서는 ref가 없어서 결국 에러남
 type ViewComponent = <C extends React.ElementType = 'div'>(
   props: ViewProps<C>,
 ) => React.ReactNode | null
@@ -28,8 +29,6 @@ type TestProps<T extends React.ElementType> = {
   as?: T
 }
 
-const a = <T extends React.ElementType>(a: T) => {
-  return a
-}
+const a = <T extends React.ElementType>(a: T) => a
 
 a('a')
