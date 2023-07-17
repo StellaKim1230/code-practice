@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import './App.css'
-import { View, Text } from './packages/design-core/src/components'
+import { View, Text } from '../packages/design-core/src/components'
 
 function App() {
   const ref = useRef<HTMLAnchorElement>(null)

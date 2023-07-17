@@ -1,5 +1,8 @@
 import { forwardRef } from 'react'
-import { PolymorphicComponentProps, PolymorphicRef } from '../types'
+import {
+  PolymorphicComponentProps,
+  PolymorphicRef,
+} from '../../../../design-styles/src/theme/types/Polymorphic'
 
 type _TextProps = {
   size: number
