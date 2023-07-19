@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./src"],
+  "exclude": ["node_modules", "./lib", "./cjs", "./esm", "**/.*"],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "outDir": "lib",
+    "composite": true,
+    "paths": {
+      "@design/styles": ["../../packages/design-styles/src"]
+    },
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "lib"
+  }
+}

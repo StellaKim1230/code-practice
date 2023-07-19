@@ -1,10 +1,14 @@
 {
-  "name": "design-core",
+  "name": "@design/core",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/core.js", 
+  "types": "dist/index.d.ts", 
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "tsc build"
+    "build": "tsc --project ./tsconfig.json && vite build --config ./vite.config.ts"
+  },
+  "dependencies": {
+    "@design/styles": "1.0.0"
   }
 }

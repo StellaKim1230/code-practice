@@ -1,5 +1,5 @@
-import { CoSize } from '@co-design/styles'
+// import { CoSize } from '@co-design/styles'
 
-export interface SharedButtonProps extends CoComponentProps<> {
-  size?: CoSize
-}
+// export interface SharedButtonProps extends CoComponentProps<> {
+//   size?: CoSize
+// }

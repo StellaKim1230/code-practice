@@ -1,0 +1,11 @@
+{
+  "name": "@design/styles",
+  "version": "1.0.0",
+  "main": "dist/core.js", 
+  "types": "dist/index.d.ts", 
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json && vite build --config ./vite.config.ts "
+  }
+}
